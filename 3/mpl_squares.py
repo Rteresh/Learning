@@ -10,3 +10,4 @@ plt.ylabel('Square of Value', fontsize=14)  # Это у нас название 
 #  Назначение размера грифта делений на осях.
 plt.tick_params(axis='both', labelsize=14)  # Это школа деления
 plt.show()
+print('test git')
