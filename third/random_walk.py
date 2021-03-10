@@ -17,18 +17,16 @@ class RandomWalk:
         # Шаги генерируются до достижения нужной длины.
         while len(self.x_values) < self.num_points:
             # Определение направления и длины перемещения
-            x_direction = choice([1, -1])
-            x_distance = choice([0, 1, 2, 3, 4])
-            x_step = x_distance * x_direction
-
-            y_direction = choice([1, -1])
-            y_distance = choice([0, 1, 2, 3, 4])
-            y_step = y_distance * y_direction
 
             # Отклоенение нулевых значений x и y
-            x = self.x_values[-1] + x_step
-            y = self.y_values[-1] + y_step
-            print(self.y_values[-1])
+            x = self.x_values[-1] + self._get_step()
+            y = self.y_values[-1] + self._get_step()
 
             self.x_values.append(x)
             self.y_values.append(y)
+
+    def _get_step(self):
+        direction = choice([1, -1])
+        distance = choice([0, 1, 2, 3, 4])
+        step = distance * direction
+        return step
