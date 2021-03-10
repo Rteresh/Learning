@@ -16,7 +16,7 @@ class Settings:
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullet_allowed = 30
-        # 3)Aliens
+        # third)Aliens
         # fleet_direction = 1 обозновачет движение вправо, а -1 влево
         # 4) Ship
         self.ship_limit = 3
